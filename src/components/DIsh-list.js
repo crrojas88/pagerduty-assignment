@@ -4,7 +4,7 @@ const DishList = ({ dishes }) => {
     return(
         <div>
             <ul>
-                {dishes.map(dish => <li>{dish.name}</li>)}
+                {dishes.map(dish => <li key={dish.id}>{dish.name}</li>)}
             </ul>
         </div>
     )
