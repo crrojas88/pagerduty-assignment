@@ -1,24 +1,24 @@
 {
-    "dishes": [
-        {
-            "name": "Coq au Vin",
-            "cuisine": "French",
-            "id": 1
-        },
-        {
-            "name": "Cacio e Pepe",
-            "cuisine": "Italian",
-            "id": 2
-        },
-        {
-            "name": "Ceviche",
-            "cuisine": "Peruvian",
-            "id": 3
-        },
-        {
-            "name": "Chilaquiles",
-            "cuisine": "Mexican",
-            "id": 4
-        }
-    ]
+  "dishes": [
+    {
+      "name": "Coq au Vin",
+      "cuisine": "French",
+      "id": 1
+    },
+    {
+      "name": "Cacio e Pepe",
+      "cuisine": "Italian",
+      "id": 2
+    },
+    {
+      "name": "Ceviche",
+      "cuisine": "Peruvian",
+      "id": 3
+    },
+    {
+      "name": "Chilaquiles",
+      "cuisine": "Mexican",
+      "id": 4
+    }
+  ]
 }
