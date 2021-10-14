@@ -44,11 +44,20 @@ const App = () => {
     })
   }
 
+// DELETE: id of individual dish is passes to the function and axios delete method removes from our db. setDishes filters out
+// dishes that don't match id, causing re-render.
+const deleteDish = (id) => {
+  axios.delete(`${baseUrl}/${id}`)
+  .then(() => {
+    setDishes(dishes.filter(dish => dish.id !== id))
+  })
+} 
+
 return(
   <div>
-    <h1>PagerDuty Assignment</h1>
+    <h1>Noms Around the World</h1>
     <Form newDish={newDish} handleChange={handleChange} addDish={addDish}/>
-    <DishList dishes={dishes} />
+    <DishList dishes={dishes} deleteDish={deleteDish}/>
   </div>
 )
 }

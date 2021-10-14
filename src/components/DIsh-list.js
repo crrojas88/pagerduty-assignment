@@ -1,10 +1,12 @@
 import React from 'react';
 
-const DishList = ({ dishes }) => {
+import Dish from './Dish';
+
+const DishList = ({ dishes, deleteDish }) => {
     return(
         <div>
             <ul>
-                {dishes.map(dish => <li key={dish.id}>{dish.name}</li>)}
+                {dishes.map(dish => <li key={dish.id}><Dish dish={dish} deleteDish={() => deleteDish(dish.id)} /></li>)}
             </ul>
         </div>
     )

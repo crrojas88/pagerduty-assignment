@@ -1,11 +1,20 @@
-# PagerDuty Take Home Assignment
+# NomBook
 
-## The Interview Scenario
+Welcome to NomBook, an app for logging your favorite dishes from around the world!
 
-You are on a quest as an elusive chef/programmer to sample the abundance of international cuisine from all over the world. In order to document your adventure and not risk forgetting the names of various delicious meals, you decide to code an application to help keep track of them.
- 
-Before the interview, your task is to build out the v1 of this application. It must support:
+With NomBook you can view, add, and delete entries (we're still in the early stages and will add update functionality with more funding).
 
-* Viewing all dish names we've added.
-* Adding just the name of a dish.
-* Deleting a dish.
+## Starting NomBook
+
+Clone this repository to your local machine. Once cloned, make sure you navigate to the root of the directory and input the following commands in your terminal:
+```
+npm run server
+```
+
+```
+npm start
+```
+
+The app will open in a new tab in your browser.
+
+Enjoy!
