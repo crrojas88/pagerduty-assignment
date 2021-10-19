@@ -3,18 +3,33 @@ import axios from 'axios';
 
 import DishList from './components/Dish-list';
 import Form from './components/Form';
+import SearchForm from './components/Search-form';
 
 const App = () => {
 // Storing our dishes and form state in state hooks
   const [ dishes, setDishes ] = useState([])
   const [ newDish, setNewDish ] = useState('')
-  // const [ newCuisine, setNewCuisine ] = useState('')
+  const [ newIngredient, setNewIngredient ] = useState('')
+  const [ newSearch, setNewSearch ] = useState('')
+  const [ newSearchedDish, setNewSearchedDish ] = useState([])
 
 // Handle form state change for input values and possibility to add search functionality.
   const handleChange = (e) => {
     const value = e.target.value
 
     setNewDish(value)
+  }
+
+  const handleIngredientChange = (e) => {
+    const value = e.target.value
+
+    setNewIngredient(value)
+  }
+
+  const handleSearch = (e) => {
+    const value = e.target.value
+    
+    setNewSearch(value)
   }
 
   const baseUrl = 'http://localhost:3001/dishes'
@@ -34,6 +49,7 @@ const App = () => {
 
     const dishObj = {
       name: newDish,
+      ingredients: newIngredient,
       id: dishes.length + 1
     }
 
@@ -41,6 +57,7 @@ const App = () => {
     .then(response => {
       setDishes(dishes.concat(response.data))
       setNewDish('')
+      setNewIngredient('')
     })
   }
 
@@ -53,10 +70,21 @@ const deleteDish = (id) => {
   })
 } 
 
+const submitSearch = () => {
+  // handles logic for searching dishes with ingredient keywords
+}
+
 return(
   <div>
     <h1>Noms Around the World</h1>
-    <Form newDish={newDish} handleChange={handleChange} addDish={addDish}/>
+    <Form 
+    newDish={newDish} 
+    newIngredient={newIngredient} 
+    handleIngredientChange={handleIngredientChange} 
+    handleChange={handleChange} 
+    addDish={addDish}
+    />
+    <SearchForm newSearch={newSearch} handleSearch={handleSearch} submitSearch={submitSearch}/>
     <DishList dishes={dishes} deleteDish={deleteDish}/>
   </div>
 )

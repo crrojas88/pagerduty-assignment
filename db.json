@@ -17,8 +17,17 @@
     },
     {
       "name": "Chilaquiles",
-      "cuisine": "Mexican",
       "id": 4
+    },
+    {
+      "name": "Adobo",
+      "ingredients": "vinegar, pork, onions",
+      "id": 5
+    },
+    {
+      "name": "Empanadas",
+      "ingredients": "beef, flour, water",
+      "id": 6
     }
   ]
 }
